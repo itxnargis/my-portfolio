@@ -1,3 +1,4 @@
+import React from 'react';
 import { ExternalLink, Github } from 'lucide-react';
 
 const projects = [
@@ -26,32 +27,36 @@ const projects = [
 
 const Projects = () => {
   return (
-    <div className="min-h-screen py-20 px-4">
-      <div className="container mx-auto">
-        <h2 className="leading-normal text-4xl md:text-5xl font-bold !leading-normal mb-12 text-center bg-gradient-to-r from-purple-400 to-pink-600 text-transparent bg-clip-text transform transition-all duration-500 ease-in-out hover:scale-105">
-          My Projects
+    <section id="about" className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-black text-white">
+    <div className="container mx-auto">
+      <div className="flex items-center justify-center mb-12">
+        <span className="hidden sm:block w-24 h-[2px] bg-amber-400"></span>
+        <h2 className="text-3xl sm:text-4xl font-bold mx-4 bg-gradient-to-r from-purple-400 to-pink-600 text-transparent bg-clip-text">
+          Projects
         </h2>
+          <span className="hidden sm:block w-24 h-[2px] bg-amber-400"></span>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <ProjectCard key={index} project={project} />
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
 const ProjectCard = ({ project }) => (
-  <div className="bg-gray-800 rounded-lg overflow-hidden shadow-lg transform transition-all duration-300 ease-in-out hover:scale-105">
-    <img src={project.image} alt={project.title} className="w-full h-48 object-cover" />
+  <div className="bg-gray-800 rounded-lg overflow-hidden shadow-lg transform transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl hover:border-2 hover:border-amber-400">
+    <img src={project.image} alt={project.title} className="w-full h-64 object-cover" />
     <div className="p-6">
       <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-      <p className="text-gray-400 mb-4">{project.description}</p>
+      <p className="text-gray-200 mb-4">{project.description}</p>
       <div className="flex justify-between">
-        <a href={project.demoLink} target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300 flex items-center transition-colors duration-300">
+        <a href={project.demoLink} target="_blank" rel="noopener noreferrer" className="text-black hover:text-purple-300 flex items-center transition-colors duration-300 px-4 py-2 bg-rose-50 rounded-md">
           Live Demo <ExternalLink className="ml-1 h-4 w-4" />
         </a>
-        <a href={project.codeLink} target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300 flex items-center transition-colors duration-300">
+        <a href={project.codeLink} target="_blank" rel="noopener noreferrer" className="text-black hover:text-purple-300 flex items-center transition-colors duration-300 px-4 py-2 bg-rose-50 rounded-md">
           Source Code <Github className="ml-1 h-4 w-4" />
         </a>
       </div>
