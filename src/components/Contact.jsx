@@ -20,11 +20,11 @@ const Contact = () => {
   }
 
   return (
-    <section id="contact" className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-black text-white">
+    <section id="contact" className="py-24 px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto">
         <div className="flex items-center justify-center mb-12">
           <span className="hidden sm:block w-24 h-[2px] bg-amber-400"></span>
-          <h2 className="text-3xl sm:text-4xl font-bold mx-4 bg-gradient-to-r from-purple-400 to-pink-600 text-transparent bg-clip-text">
+          <h2 className="text-3xl !leading-normal sm:text-4xl font-bold mx-4 bg-clip-text bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text">
             Contact Me
           </h2>
           <span className="hidden sm:block w-24 h-[2px] bg-amber-400"></span>

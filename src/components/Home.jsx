@@ -5,7 +5,7 @@ import { Github, Linkedin, Mail, Twitter } from 'lucide-react'
 const Home = () => {
   return (
     <section className='min-h-screen flex flex-col justify-center items-center text-center px-4 sm:px-6 lg:px-8'>
-      <h1 className='text-5xl sm:text-6xl md:text-7xl !leading-normal font-bold mb-6 leading-tight bg-gradient-to-r from-purple-400 to-pink-600 text-transparent bg-clip-text transform transition-all duration-500 ease-in-out hover:scale-105'>
+      <h1 className='text-5xl sm:text-6xl md:text-7xl !leading-normal font-bold mb-6 leading-tight bg-clip-text bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text transform transition-all duration-500 ease-in-out hover:scale-105'>
         Hi, I'm Nargis
       </h1>
       <h2 className='text-3xl sm:text-4xl mb-8 transform transition-all duration-500 ease-in-out hover:scale-105'>
@@ -15,7 +15,7 @@ const Home = () => {
         Passionate about creating beautiful and user-friendly web experiences.
       </p>
 
-      <div className='flex justify-center space-x-8 mb-12 text-black'>
+      <div className='flex justify-center space-x-8 mb-12'>
         <SocialIcon href="https://github.com/itxnargis" icon={Github} label="GitHub" />
         <SocialIcon href="mailto:itxnargiskhatun@gmail.com" icon={Mail} label="Email" />
         <SocialIcon href="https://twitter.com/81283nargis" icon={Twitter} label="Twitter" />
@@ -39,7 +39,7 @@ const SocialIcon = ({ href, icon: Icon, label }) => (
     href={href}
     target="_blank"
     rel="noopener noreferrer"
-    className="text-black hover:text-amber-400 transition-all duration-300 transform hover:scale-125"
+    className="hover:text-amber-400 transition-all duration-300 transform hover:scale-125"
     aria-label={label}
   >
     <Icon size={32} />

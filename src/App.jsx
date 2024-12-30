@@ -11,7 +11,7 @@ import Skills from './components/Skills'
 const App = () => {
   return (
     <Router>
-      <div className='bg-rose-50 text-black min-h-screen flex flex-col'>
+      <div className='min-h-screen flex flex-col'>
         <Navbar />
         <main className="flex-grow">
           <Routes>
