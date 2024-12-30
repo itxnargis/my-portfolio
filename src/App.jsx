@@ -7,6 +7,8 @@ import Projects from './components/Projects'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import Skills from './components/Skills'
+import Education from './components/Education'
+import Certifications from './components/Certifications'
 
 const App = () => {
   return (
@@ -18,8 +20,10 @@ const App = () => {
             <Route path='/' element={<Home />} />
             <Route path='/about' element={<About />} />
             <Route path='/projects' element={<Projects />} />
-            <Route path='/contact' element={<Contact />} />
             <Route path='/skills' element={<Skills />}/>
+            <Route path='/education' element={<Education />}/>
+            <Route path='/certifications' element={<Certifications />}/>
+            <Route path='/contact' element={<Contact />} />
           </Routes>
         </main>
         <Footer />
@@ -29,3 +33,4 @@ const App = () => {
 }
 
 export default App
+

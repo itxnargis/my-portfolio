@@ -1,5 +1,6 @@
 import React from 'react';
 import { ExternalLink, Github } from 'lucide-react';
+import AdditionalProjects from './AdditionalProjects';
 
 const projects = [
   {
@@ -22,6 +23,27 @@ const projects = [
     image: "./spotify-image.png",
     demoLink: "https://spotify-music-finder-inky.vercel.app",
     codeLink: "https://github.com/itxnargis/spotify-music-finder"
+  },
+  {
+    title: "Ecommerce Website",
+    image: "./ecommerce-image.jpeg",
+    description: "A full-featured MERN stack eCommerce platform with advanced features.",
+    demoLink: "https://ecommerce-website-front.vercel.app",
+    codeLink: "https://github.com/itxnargis/Ecommerce-Website-Frontend"
+  },
+  {
+    title: "Resto Restaurant",
+    image: "./resto-restaurant.jpg",
+    description: "A demo website for a restaurant showcasing delicious flavors and cozy atmosphere.",
+    demoLink: "https://itxnargis.github.io/resto-restaurant/",
+    codeLink: "https://github.com/itxnargis/resto-restaurant"
+  },
+  {
+    title: "Explore Lakshadweep",
+    image: "./lakshadweep-tours.jpg",
+    description: "An informative travel website for exploring the beauty of Lakshadweep.",
+    demoLink: "https://itxnargis.github.io/explore-lakshadweep/",
+    codeLink: "https://github.com/itxnargis/explore-lakshadweep"
   }
 ];
 
@@ -42,12 +64,14 @@ const Projects = () => {
           ))}
         </div>
       </div>
+
+      <AdditionalProjects />
     </section>
   );
 };
 
 const ProjectCard = ({ project }) => (
-  <div className="bg-gray-800 rounded-lg overflow-hidden shadow-lg transform transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl hover:border-2 hover:border-amber-400">
+  <div className="bg-gray-800 mb-6 rounded-lg overflow-hidden shadow-lg transform transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl hover:border-2 hover:border-amber-400">
     <img src={project.image} alt={project.title} className="w-full h-64 object-cover" />
     <div className="p-6">
       <h3 className="text-gray-300 text-xl font-semibold mb-2">{project.title}</h3>

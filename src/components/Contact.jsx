@@ -20,7 +20,7 @@ const Contact = () => {
   }
 
   return (
-    <section id="contact" className="py-24 px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="py-32 px-4 mb-12 sm:px-6 lg:px-8">
       <div className="container mx-auto">
         <div className="flex items-center justify-center mb-12">
           <span className="hidden sm:block w-24 h-[2px] bg-amber-400"></span>

@@ -50,11 +50,13 @@ const Navbar = () => {
               </span>
             </Link>
             <div className="hidden md:flex space-x-4 items-center">
-              <NavLink to="/">Home</NavLink>
+            <NavLink to="/">Home</NavLink>
               <NavLink to="/about">About</NavLink>
               <NavLink to="/projects">Projects</NavLink>
+              <NavLink to="/skills">Skills</NavLink>
+              <NavLink to="/education">Education</NavLink>
               <NavLink to="/contact">Contact</NavLink>
-              </div>
+            </div>
             <div className="flex items-center">
               <div className="dropdown dropdown-end">
                 <label tabIndex={0} className="btn btn-ghost btn-circle">
@@ -109,7 +111,7 @@ const NavLink = ({ to, children, onClick }) => {
     <Link
       to={to}
       onClick={onClick}
-      className={`text-xl px-6 py-2 rounded-md font-medium transition-colors duration-200 ${
+      className={`text-xl rounded-md font-medium transition-colors duration-200 ${
         isActive ? 'text-primary font-bold' : 'hover:text-primary'
       }`}
     >
