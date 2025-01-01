@@ -1,16 +1,18 @@
 import React from "react";
 import Skills from "./Skills";
+import Projects from "./Projects";
+import Contact from "./Contact";
 
 const About = () => {
   return (
     <section id="about" className="py-32 px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto">
         <div className="flex items-center justify-center mb-12">
-          <span className="hidden sm:block w-24 h-[2px] bg-amber-400"></span>
+          <span className="hidden sm:block w-24 h-[2px] bg-amber-600"></span>
           <h2 className="text-3xl sm:text-4xl font-bold mx-4 bg-clip-text bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text">
             About Me
           </h2>
-          <span className="hidden sm:block w-24 h-[2px] bg-amber-400"></span>
+          <span className="hidden sm:block w-24 h-[2px] bg-amber-600"></span>
         </div>
 
         <div className="max-w-4xl mx-auto space-y-8">
@@ -38,7 +40,7 @@ const About = () => {
         <div className="text-center">
           <a
             href="/CV.pdf"
-            className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full inline-block transition-all duration-300 transform hover:scale-110 hover:shadow-lg group"
+            className="bg-amber-600 hover:bg-amber-800 text-white font-bold py-3 px-8 rounded-full inline-block transition-all duration-300 transform hover:scale-110 hover:shadow-lg group"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -60,6 +62,9 @@ const About = () => {
           </a>
         </div>
       </div>
+
+      <Projects />
+      <Contact />
     </section>
   );
 };

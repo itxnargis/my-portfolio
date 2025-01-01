@@ -25,7 +25,7 @@ const Home = () => {
       <div className='transform transition-all duration-500 ease-in-out hover:scale-110'>
         <Link
           to='/about'
-          className='bg-purple-600 hover:bg-purple-700 text-white font-bold px-8 py-4 rounded-full transition-all duration-300 inline-block hover:shadow-lg'
+          className='bg-amber-600 hover:bg-amber-800 text-white font-bold px-8 py-4 rounded-full transition-all duration-300 inline-block hover:shadow-lg'
         >
           Learn more about me
         </Link>
