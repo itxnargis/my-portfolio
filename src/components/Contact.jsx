@@ -26,11 +26,11 @@ const Contact = () => {
     <section id="contact" className="py-24 px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto">
         <div className="flex items-center justify-center">
-          <span className="hidden sm:block w-24 h-[2px] bg-amber-600"></span>
+          <span className="hidden sm:block w-24 h-[2px] bg-amber-500"></span>
           <h2 className="text-3xl sm:text-4xl font-bold mx-4 bg-clip-text bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text">
             Let's Connect
           </h2>
-          <span className="hidden sm:block w-24 h-[2px] bg-amber-600"></span>
+          <span className="hidden sm:block w-24 h-[2px] bg-amber-500"></span>
         </div>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-16">
             Ready to bring your ideas to life? Drop me a message and let's start the conversation!
@@ -105,7 +105,7 @@ const Contact = () => {
 
             <button
               type="submit"
-              className='w-full bg-amber-600 hover:amber-400 font-bold py-3 px-6 text-white rounded-lg flex justify-center items-center transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-amber-400/20'
+              className='w-full bg-amber-500 hover:amber-400 font-bold py-3 px-6 text-white rounded-lg flex justify-center items-center transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-amber-400/20'
             >
               Send Message
               <Send className='w-5 h-5 ml-2 animate-pulse' />

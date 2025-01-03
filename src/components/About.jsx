@@ -8,11 +8,11 @@ const About = () => {
     <section id="about" className="py-32 px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto">
         <div className="flex items-center justify-center mb-12">
-          <span className="hidden sm:block w-24 h-[2px] bg-amber-600"></span>
+          <span className="hidden sm:block w-24 h-[2px] bg-amber-500"></span>
           <h2 className="text-3xl sm:text-4xl font-bold mx-4 bg-clip-text bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text">
             About Me
           </h2>
-          <span className="hidden sm:block w-24 h-[2px] bg-amber-600"></span>
+          <span className="hidden sm:block w-24 h-[2px] bg-amber-500"></span>
         </div>
 
         <div className="max-w-4xl mx-auto space-y-8">
@@ -36,31 +36,6 @@ const About = () => {
         </div>
 
         <Skills />
-
-        <div className="text-center">
-          <a
-            href="/CV.pdf"
-            className="bg-amber-600 hover:bg-amber-800 text-white font-bold py-3 px-8 rounded-full inline-block transition-all duration-300 transform hover:scale-110 hover:shadow-lg group"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Download CV
-            <svg
-              className="w-5 h-5 ml-2 inline-block transition-transform duration-300 group-hover:translate-x-1"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
-              />
-            </svg>
-          </a>
-        </div>
       </div>
 
       <Projects />
