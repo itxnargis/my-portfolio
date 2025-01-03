@@ -52,8 +52,8 @@ const Education = () => {
     <h3 className="text-2xl font-semibold text-amber-500">{edu.institution}</h3>
   </div>
   <p className="text-gray-300 mb-2">{edu.duration}</p>
-  <p className="text-lg font-medium mb-1">{edu.course}</p>
-  <p className="text-base-content/80 mb-6">{edu.field}</p>
+  <p className="text-gray-400 text-lg font-medium mb-1">{edu.course}</p>
+  <p className="text-gray-400 text-base-content/80 mb-6">{edu.field}</p>
 </div>
 
             </div>

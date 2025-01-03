@@ -32,7 +32,7 @@ const Contact = () => {
           </h2>
           <span className="hidden sm:block w-24 h-[2px] bg-amber-500"></span>
         </div>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-16">
+          <p className="text-xl max-w-2xl mx-auto mb-16">
             Ready to bring your ideas to life? Drop me a message and let's start the conversation!
           </p>
 

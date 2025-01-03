@@ -25,13 +25,13 @@ const Home = () => {
       <div className='flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6 transform transition-all duration-500 ease-in-out hover:scale-110'>
         <Link
           to='/about'
-          className='bg-amber-500 font-bold px-8 py-4 rounded-full transition-all duration-300 inline-block hover:shadow-lg'
+          className='bg-amber-500 text-white font-bold px-8 py-4 rounded-full transition-all duration-300 inline-block hover:shadow-lg'
         >
           Learn more about me
         </Link>
         <a
           href="/CV.pdf"
-          className='bg-amber-500 font-bold px-8 py-4 rounded-full transition-all duration-300 inline-block hover:shadow-lg'
+          className='bg-amber-500 text-white font-bold px-8 py-4 rounded-full transition-all duration-300 inline-block hover:shadow-lg'
           target="_blank"
           rel="noopener noreferrer"
         >

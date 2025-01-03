@@ -63,16 +63,16 @@ const AdditionalProjects = () => {
               key={index}
               className="bg-gray-800 rounded-lg overflow-hidden shadow-lg transform transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl hover:border-2 hover:border-amber-500"
             >
-              <div className='p-6 relative sm:p-4'>
+              <div className='p-6 relative sm:p-2'>
                 <div className="text-4xl mb-4">{project.icon}</div>
                 <h3 className="text-2xl font-semibold mb-2 text-amber-500">{project.title}</h3>
                 <p className="text-gray-300 mb-6">{project.description}</p>
-                <div className="flex justify-between items-center sm:gap-4">
+                <div className="flex flex-col sm:flex-row sm:justify-between sm:gap-4">
                   <a
                     href={project.demoLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-black hover:text-purple-300 flex items-center transition-colors duration-300 px-4 py-2 bg-rose-50 rounded-md hover:bg-amber-500 hover:text-white"
+                    className="text-black hover:text-purple-300 flex items-center justify-center transition-colors duration-300 px-4 py-2 mb-2 sm:mb-0 sm:px-2 bg-rose-50 rounded-md hover:bg-amber-500 hover:text-white"
                   >
                     <ExternalLink className="mr-1 h-4 w-4" />
                     Live Demo
@@ -81,12 +81,13 @@ const AdditionalProjects = () => {
                     href={project.codeLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-black hover:text-purple-300 flex items-center transition-colors duration-300 px-4 py-2 bg-rose-50 rounded-md hover:bg-amber-500 hover:text-white"
+                    className="text-black hover:text-purple-300 flex items-center justify-center transition-colors duration-300 px-4 py-2 sm:px-2 bg-rose-50 rounded-md hover:bg-amber-500 hover:text-white"
                   >
                     <Github className="mr-1 h-4 w-4" />
                     Source Code
                   </a>
                 </div>
+
               </div>
             </div>
           ))}
