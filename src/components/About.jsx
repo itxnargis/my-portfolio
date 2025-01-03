@@ -2,6 +2,7 @@ import React from "react";
 import Skills from "./Skills";
 import Projects from "./Projects";
 import Contact from "./Contact";
+import Education from './Education';
 
 const About = () => {
   return (
@@ -39,6 +40,7 @@ const About = () => {
       </div>
 
       <Projects />
+      <Education />
       <Contact />
     </section>
   );
