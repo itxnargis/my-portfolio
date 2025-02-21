@@ -3,6 +3,13 @@ import { ExternalLink, Github, ChevronRight } from 'lucide-react';
 
 const additionalProjects = [
   {
+    title: "Explore Lakshadweep",
+    description: "An informative travel website for exploring the beauty of Lakshadweep.",
+    demoLink: "https://itxnargis.github.io/explore-lakshadweep/",
+    codeLink: "https://github.com/itxnargis/explore-lakshadweep",
+    icon: "🏝️"
+  },
+  {
     title: "Video Player",
     description: "Seamless video playback with sleek preloader and intuitive controls.",
     demoLink: "https://itxnargis.github.io/video/",
