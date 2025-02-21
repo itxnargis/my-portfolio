@@ -30,7 +30,7 @@ const Home = () => {
           Learn more about me
         </Link>
         <a
-          href="/Nargis-CV.pdf"
+          href="CV.pdf"
           className='bg-amber-500 text-white font-bold px-8 py-4 rounded-full transition-all duration-300 inline-block hover:shadow-lg'
           target="_blank"
           rel="noopener noreferrer"
