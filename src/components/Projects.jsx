@@ -4,6 +4,14 @@ import AdditionalProjects from './AdditionalProjects';
 
 const projects = [
   {
+    title: "Chess Master",
+    description: "A comprehensive web application offering various chess-playing modes, puzzles, and features for all levels.",
+    image: "./chess.jpeg",
+    demoLink: "https://chess-frontend-dun.vercel.app/",
+    codeLink: "https://github.com/itxnargis/chess-frontend",
+    icon: "♟️"
+  },
+  {
     title: "Prescripto - Healthcare Appointment System",
     description: "A web application for healthcare appointments and prescription management.",
     image: "./prescripto-image.png",
@@ -29,10 +37,10 @@ const projects = [
   },
   {
     title: "Ecommerce Website",
-    image: "./ecommerce-image.jpeg",
+    image: "./ecommerce.jpeg",
     description: "A full-featured MERN stack eCommerce platform with advanced features.",
-    demoLink: "https://ecommerce-website-front.vercel.app",
-    codeLink: "https://github.com/itxnargis/Ecommerce-Website-Frontend",
+    demoLink: "https://trendz-ecommerce-tau.vercel.app",
+    codeLink: "https://github.com/itxnargis/trendz-ecommerce-frontend",
     icon: "🛒"
   },
   {
@@ -42,14 +50,6 @@ const projects = [
     demoLink: "https://itxnargis.github.io/resto-restaurant/",
     codeLink: "https://github.com/itxnargis/resto-restaurant",
     icon: "🍽️"
-  },
-  {
-    title: "Explore Lakshadweep",
-    image: "./lakshadweep-tours.jpg",
-    description: "An informative travel website for exploring the beauty of Lakshadweep.",
-    demoLink: "https://itxnargis.github.io/explore-lakshadweep/",
-    codeLink: "https://github.com/itxnargis/explore-lakshadweep",
-    icon: "🏝️"
   }
 ];
 
