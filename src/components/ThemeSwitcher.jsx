@@ -49,7 +49,7 @@ const ThemeSwitcher = () => {
       <select
         value={currentTheme}
         onChange={handleThemeChange}
-        className="select select-bordered w-full max-w-xs bg-gray-200 text-gray-800 dark:bg-gray-800 dark:text-gray-100"
+        className="select select-bordered w-full max-w-xs bg-gradient-to-br from-slate-50 via-white to-amber-50 text-gray-800 dark:bg-gray-800 dark:text-gray-100"
       >
         {themes.map((theme) => (
           <option key={theme} value={theme}>
