@@ -1,21 +1,65 @@
 /** @type {import('tailwindcss').Config} */
-export default {
+module.exports = {
   content: [
     "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        amber: {
+          50: "#fffbeb",
+          100: "#fef3c7",
+          200: "#fde68a",
+          300: "#fcd34d",
+          400: "#fbbf24",
+          500: "#f59e0b",
+          600: "#d97706",
+          700: "#b45309",
+          800: "#92400e",
+          900: "#78350f",
+          950: "#451a03",
+        },
+      },
+      fontFamily: {
+        sans: [
+          "Inter",
+          "ui-sans-serif",
+          "system-ui",
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "Segoe UI",
+          "Roboto",
+          "Helvetica Neue",
+          "Arial",
+          "sans-serif",
+        ],
+      },
+      animation: {
+        "spin-slow": "spin 3s linear infinite",
+      },
+      boxShadow: {
+        "inner-md": "inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)",
+      },
+      borderRadius: {
+        lg: "1rem",
+        md: "0.75rem",
+        sm: "0.5rem",
+      },
+    },
   },
-  plugins: [require("daisyui")],
+  plugins: [
+    require("tailwindcss-animate"),
+    require("daisyui"),
+  ],
   daisyui: {
     themes: [
-      "default",    // Default theme
-      "light",      // Light theme
-      "dark",       // Dark theme
-      "cupcake",    // Cupcake theme
-      "emerald",    // Emerald theme
-      "corporate",  // Additional themes
+      "default",
+      "light",
+      "dark",
+      "cupcake",
+      "emerald",
+      "corporate",
       "synthwave",
       "retro",
       "cyberpunk",
