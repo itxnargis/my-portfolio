@@ -98,7 +98,7 @@ const additionalProjects = [
     id: 6,
     title: "Resto Restaurant",
     description: "A demo website for a restaurant showcasing delicious flavors and cozy atmosphere.",
-    image: "/resto-restaurant.jpg",
+    image: "/resto-preview.gif",
     demoLink: "https://itxnargis.github.io/resto-restaurant/",
     codeLink: "https://github.com/itxnargis/resto-restaurant",
     icon: "🍽️",
