@@ -1,4 +1,4 @@
-import { ExternalLink, Github, Star, Code2, ArrowRight, Sparkles, ChevronRight, Eye, Award, TrendingUp } from "lucide-react"
+import { ExternalLink, Github, Star, Code2, ArrowRight, Sparkles, ChevronRight, Eye, Award, TrendingUp, Filter, Layers } from "lucide-react"
 import { useState, useEffect } from "react"
 
 const featuredProjects = [
@@ -12,10 +12,13 @@ const featuredProjects = [
     codeLink: "https://github.com/itxnargis/chess-frontend",
     icon: "♟️",
     tags: ["React", "CSS", "JavaScript", "Socket.IO"],
+    techStack: ["React", "JavaScript", "CSS"],
+    primaryTech: "React",
     featured: true,
     status: "Live",
     year: "2025",
-    category: "Web Application",
+    category: "Gaming",
+    type: "Web Application",
     highlights: ["Real-time multiplayer", "AI integration", "Cross-platform"]
   },
   {
@@ -28,10 +31,13 @@ const featuredProjects = [
     codeLink: "https://github.com/itxnargis/prescripto",
     icon: "🏥",
     tags: ["React", "Tailwind CSS", "Firebase", "Authentication"],
+    techStack: ["React", "Firebase", "Tailwind CSS"],
+    primaryTech: "React",
     featured: true,
     status: "Live",
     year: "2024",
     category: "Healthcare",
+    type: "Web Application",
     highlights: ["Appointment booking", "Prescription management", "User authentication"]
   },
   {
@@ -39,15 +45,18 @@ const featuredProjects = [
     title: "Trendz Ecommerce Platform",
     description: "A full-featured MERN stack eCommerce platform with advanced features.",
     longDescription: "Complete ecommerce solution with product catalog, shopping cart, payment integration, and admin dashboard. Built using MERN stack with modern UI/UX design.",
-    image: "/ecommerce.jpeg",
+    image: "/trendz-preview.gif",
     demoLink: "https://trendz-ecommerce-tau.vercel.app",
     codeLink: "https://github.com/itxnargis/trendz-ecommerce-frontend",
     icon: "🛒",
     tags: ["React", "Node.js", "MongoDB", "Express", "Stripe"],
+    techStack: ["React", "Node.js", "MongoDB", "Express"],
+    primaryTech: "MERN",
     featured: true,
     status: "Live",
     year: "2025",
     category: "E-commerce",
+    type: "Full-stack Application",
     highlights: ["Full-stack MERN", "Payment integration", "Admin dashboard"]
   }
 ]
@@ -62,9 +71,12 @@ const additionalProjects = [
     codeLink: "https://github.com/itxnargis/live-chat-app",
     icon: "💬",
     tags: ["React", "Firebase", "CSS", "Real-time"],
+    techStack: ["React", "Firebase", "CSS"],
+    primaryTech: "React",
     status: "Live",
     year: "2024",
-    category: "Communication"
+    category: "Communication",
+    type: "Web Application"
   },
   {
     id: 5,
@@ -75,9 +87,12 @@ const additionalProjects = [
     codeLink: "https://github.com/itxnargis/spotify-music-finder",
     icon: "🎵",
     tags: ["React", "Spotify API", "Tailwind CSS", "Music"],
+    techStack: ["React", "Spotify API", "Tailwind CSS"],
+    primaryTech: "React",
     status: "Live",
     year: "2024",
-    category: "Entertainment"
+    category: "Entertainment",
+    type: "Web Application"
   },
   {
     id: 6,
@@ -88,9 +103,12 @@ const additionalProjects = [
     codeLink: "https://github.com/itxnargis/resto-restaurant",
     icon: "🍽️",
     tags: ["HTML", "CSS", "JavaScript", "Responsive"],
+    techStack: ["HTML", "CSS", "JavaScript"],
+    primaryTech: "Vanilla JS",
     status: "Live",
     year: "2024",
-    category: "Restaurant"
+    category: "Business",
+    type: "Static Website"
   },
   {
     id: 7,
@@ -100,9 +118,12 @@ const additionalProjects = [
     codeLink: "https://github.com/itxnargis/explore-lakshadweep",
     icon: "🏝️",
     tags: ["HTML", "CSS", "JavaScript", "Travel"],
+    techStack: ["HTML", "CSS", "JavaScript"],
+    primaryTech: "Vanilla JS",
     status: "Live",
     year: "2024",
-    category: "Travel"
+    category: "Travel",
+    type: "Static Website"
   },
   {
     id: 8,
@@ -112,9 +133,12 @@ const additionalProjects = [
     codeLink: "https://github.com/itxnargis/english-dictionary",
     icon: "📚",
     tags: ["HTML", "CSS", "JavaScript", "Dictionary API"],
+    techStack: ["HTML", "CSS", "JavaScript"],
+    primaryTech: "Vanilla JS",
     status: "Live",
     year: "2024",
-    category: "Education"
+    category: "Education",
+    type: "Web Application"
   },
   {
     id: 9,
@@ -124,9 +148,12 @@ const additionalProjects = [
     codeLink: "https://github.com/itxnargis/grocery-bud",
     icon: "🛒",
     tags: ["React", "CSS", "Local Storage", "Productivity"],
+    techStack: ["React", "CSS"],
+    primaryTech: "React",
     status: "Live",
     year: "2024",
-    category: "Productivity"
+    category: "Productivity",
+    type: "Web Application"
   }
 ]
 
@@ -135,14 +162,29 @@ const allProjects = [...featuredProjects, ...additionalProjects]
 const Projects = () => {
   const [isVisible, setIsVisible] = useState(false)
   const [selectedCategory, setSelectedCategory] = useState('All')
-  const [selectedProject, setSelectedProject] = useState(null)
+  const [filterType, setFilterType] = useState('category') // 'category' or 'tech'
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
 
-  const categories = ['All', 'Web Application', 'E-commerce', 'Healthcare', 'Communication', 'Entertainment', 'Travel', 'Education', 'Productivity', 'Restaurant']
+  // Organized categories by project type/domain
+  const projectCategories = ['All', 'E-commerce', 'Healthcare', 'Gaming', 'Communication', 'Entertainment', 'Travel', 'Education', 'Productivity', 'Business']
+  
+  // Tech stack categories
+  const techCategories = ['All', 'React', 'MERN', 'Vanilla JS', 'Firebase', 'Full-stack']
 
-  const filteredProjects = selectedCategory === 'All' 
-    ? allProjects 
-    : allProjects.filter(project => project.category === selectedCategory)
+  const currentCategories = filterType === 'category' ? projectCategories : techCategories
+
+  const getFilteredProjects = () => {
+    if (selectedCategory === 'All') return allProjects
+    
+    if (filterType === 'category') {
+      return allProjects.filter(project => project.category === selectedCategory)
+    } else {
+      return allProjects.filter(project => project.primaryTech === selectedCategory)
+    }
+  }
+
+  const filteredProjects = getFilteredProjects()
+  const filteredFeaturedProjects = filteredProjects.filter(project => project.featured)
 
   useEffect(() => {
     setIsVisible(true)
@@ -159,6 +201,11 @@ const Projects = () => {
     document.addEventListener('mousemove', handleMouseMove)
     return () => document.removeEventListener('mousemove', handleMouseMove)
   }, [])
+
+  const handleFilterTypeChange = (type) => {
+    setFilterType(type)
+    setSelectedCategory('All') // Reset category when changing filter type
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-base-100 to-base-200 relative overflow-hidden">
@@ -231,9 +278,46 @@ const Projects = () => {
               </div>
             </div>
 
+            {/* Filter Type Toggle */}
+            <div className={`mb-8 transition-all duration-1000 delay-200 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+              <div className="flex justify-center">
+                <div className="inline-flex bg-white/90 backdrop-blur-sm border border-slate-200 rounded-xl p-1 shadow-lg">
+                  <button
+                    onClick={() => handleFilterTypeChange('category')}
+                    className={`flex items-center gap-2 px-6 py-3 rounded-lg font-semibold text-sm transition-all duration-300 ${
+                      filterType === 'category'
+                        ? 'bg-slate-900 text-white shadow-md'
+                        : 'text-slate-700 hover:bg-slate-100'
+                    }`}
+                  >
+                    <Layers className="w-4 h-4" />
+                    By Category
+                  </button>
+                  <button
+                    onClick={() => handleFilterTypeChange('tech')}
+                    className={`flex items-center gap-2 px-6 py-3 rounded-lg font-semibold text-sm transition-all duration-300 ${
+                      filterType === 'tech'
+                        ? 'bg-slate-900 text-white shadow-md'
+                        : 'text-slate-700 hover:bg-slate-100'
+                    }`}
+                  >
+                    <Code2 className="w-4 h-4" />
+                    By Tech Stack
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            {/* Category Filters */}
             <div className={`mb-12 transition-all duration-1000 delay-300 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+              <div className="flex items-center justify-center gap-3 mb-6">
+                <Filter className="w-5 h-5 text-slate-600" />
+                <span className="text-slate-600 font-semibold">
+                  Filter {filterType === 'category' ? 'by Project Type' : 'by Technology'}
+                </span>
+              </div>
               <div className="flex flex-wrap gap-2 justify-center">
-                {categories.map((category) => (
+                {currentCategories.map((category) => (
                   <button
                     key={category}
                     onClick={() => setSelectedCategory(category)}
@@ -247,47 +331,75 @@ const Projects = () => {
                   </button>
                 ))}
               </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="pb-16 px-4 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className={`mb-12 transition-all duration-1000 delay-500 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-              <div className="flex items-center gap-3 mb-6">
-                <div className="p-2 bg-gradient-to-r from-slate-700 to-slate-800 text-white rounded-xl">
-                  <Star className="w-6 h-6" />
-                </div>
-                <h2 className="text-3xl font-black text-slate-300">Featured Projects</h2>
-                <div className="flex-1 h-0.5 bg-gradient-to-r from-slate-300 to-transparent"></div>
+              
+              {/* Results count */}
+              <div className="text-center mt-4">
+                <span className="text-slate-600 text-sm">
+                  Showing {filteredProjects.length} {filteredProjects.length === 1 ? 'project' : 'projects'}
+                  {selectedCategory !== 'All' && (
+                    <span className="font-semibold"> in {selectedCategory}</span>
+                  )}
+                </span>
               </div>
             </div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20">
-              {featuredProjects
-                .filter(project => selectedCategory === 'All' || project.category === selectedCategory)
-                .map((project, index) => (
-                <FeaturedProjectCard key={project.id} project={project} index={index} />
-              ))}
-            </div>
           </div>
         </section>
 
+        {/* Featured Projects Section - Only show when there are filtered featured projects */}
+        {filteredFeaturedProjects.length > 0 && (
+          <section className="pb-16 px-4 lg:px-8">
+            <div className="max-w-7xl mx-auto">
+              <div className={`mb-12 transition-all duration-1000 delay-500 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="p-2 bg-gradient-to-r from-slate-700 to-slate-800 text-white rounded-xl">
+                    <Star className="w-6 h-6" />
+                  </div>
+                  <h2 className="text-3xl font-black text-slate-300">
+                    {selectedCategory === 'All' ? 'Featured Projects' : `Featured ${selectedCategory} Projects`}
+                  </h2>
+                  <div className="flex-1 h-0.5 bg-gradient-to-r from-slate-300 to-transparent"></div>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20">
+                {filteredFeaturedProjects.map((project, index) => (
+                  <FeaturedProjectCard key={project.id} project={project} index={index} />
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* All Projects Section */}
         <section className="pb-20 px-4 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="flex items-center gap-3 mb-12">
               <div className="p-2 bg-gradient-to-r from-amber-500 to-amber-600 text-white rounded-xl">
                 <Code2 className="w-6 h-6" />
               </div>
-              <h2 className="text-3xl font-black text-slate-300">All Projects</h2>
+              <h2 className="text-3xl font-black text-slate-300">
+                {selectedCategory === 'All' ? 'All Projects' : `${selectedCategory} Projects`}
+              </h2>
               <div className="flex-1 h-0.5 bg-gradient-to-r from-amber-300 to-transparent"></div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredProjects.map((project, index) => (
-                <ProjectCard key={project.id} project={project} index={index} />
-              ))}
-            </div>
+            {filteredProjects.length > 0 ? (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {filteredProjects.map((project, index) => (
+                  <ProjectCard key={project.id} project={project} index={index} />
+                ))}
+              </div>
+            ) : (
+              <div className="text-center py-20">
+                <div className="w-20 h-20 mx-auto mb-6 bg-slate-200 rounded-full flex items-center justify-center">
+                  <Code2 className="w-10 h-10 text-slate-400" />
+                </div>
+                <h3 className="text-xl font-bold text-slate-600 mb-2">No projects found</h3>
+                <p className="text-slate-500">
+                  No projects match your current filter. Try selecting a different {filterType === 'category' ? 'category' : 'technology'}.
+                </p>
+              </div>
+            )}
 
             <div className="text-center mt-16">
               <div className="inline-block p-6 bg-gradient-to-r from-slate-700 to-slate-800 rounded-2xl text-white hover:shadow-2xl transition-all duration-500 group">
@@ -401,7 +513,7 @@ const FeaturedProjectCard = ({ project, index }) => {
 
         <div className="flex items-center justify-between">
           <span className="text-xs text-slate-500 font-semibold uppercase tracking-wide">
-            {project.category}
+            {project.category} • {project.type}
           </span>
           <div className="flex items-center gap-1 text-amber-600">
             <TrendingUp className="w-4 h-4" />
