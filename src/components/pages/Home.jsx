@@ -122,7 +122,7 @@ const Home = () => {
   <div className="relative group">
     <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-white shadow-2xl group-hover:shadow-3xl transition-all duration-500">
       <img 
-        src="/src/assets/nargisProfile.jpeg" 
+        src="/profile-pic.png" 
         alt="Nargis Khatun - Full Stack Developer" 
         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
         onError={(e) => {
@@ -275,7 +275,7 @@ const Home = () => {
                 <div className="relative mx-auto group flex justify-center">
                   <div className="w-80 h-80 rounded-full overflow-hidden border-4 border-white shadow-2xl group-hover:shadow-3xl transition-all duration-500">
                     <img
-                      src="/src/assets/nargisProfile.jpeg"
+                      src="/profile-pic.png"
                       alt="Nargis Khatun - Full Stack Developer"
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                       onError={(e) => {

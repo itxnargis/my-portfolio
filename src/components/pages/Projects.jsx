@@ -39,14 +39,14 @@ const featuredProjects = [
   },
   {
     id: 2,
-    title: "Prescripto - Healthcare System",
+    title: "PrescripX - Healthcare System",
     description: "A web application for healthcare appointments and prescription management.",
     longDescription:
       "Complete healthcare management system with appointment booking, prescription tracking, and patient management. Built with modern React architecture and Firebase backend.",
-    image: "/precripto-preview.gif",
+    image: "/precripx-preview.gif",
     placeholder: "/placeholder.svg?height=400&width=600&text=Prescripto+Healthcare",
-    demoLink: "https://prescripto-eta.vercel.app/",
-    codeLink: "https://github.com/itxnargis/prescripto",
+    demoLink: "https://prescriptx.vercel.app",
+    codeLink: "https://github.com/itxnargis/prescripx",
     icon: "🏥",
     tags: ["React", "Tailwind CSS", "Firebase", "Authentication"],
     techStack: ["React", "Firebase", "Tailwind CSS"],
