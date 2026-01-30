@@ -45,7 +45,7 @@ const featuredProjects = [
       "Complete healthcare management system with appointment booking, prescription tracking, and patient management. Built with modern React architecture and Firebase backend.",
     image: "/precripx-preview.gif",
     placeholder: "/placeholder.svg?height=400&width=600&text=Prescripto+Healthcare",
-    demoLink: "https://prescriptx.vercel.app",
+    demoLink: "https://prescripx.vercel.app",
     codeLink: "https://github.com/itxnargis/prescripx",
     icon: "🏥",
     tags: ["React", "Tailwind CSS", "Firebase", "Authentication"],
