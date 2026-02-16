@@ -59,7 +59,34 @@ const featuredProjects = [
     highlights: ["Appointment booking", "Prescription management", "User authentication"],
   },
   {
-    id: 3,
+  id: 3,
+  title: "Memory Journal with Mood & Music",
+  description:
+    "A creative web app where users can save memories with mood emojis, music, and photos.",
+  longDescription:
+    "A full-stack memory journaling application that lets users capture special moments with photos, mood emojis, and song links. Features a timeline view, mood-based color themes, and secure PIN-based access for a personal experience.",
+  image: "/memory-journal-preview.gif",
+  placeholder: "/placeholder.svg?height=400&width=600&text=Memory+Journal",
+  demoLink: "https://memory-diary-opal.vercel.app",
+  codeLink: "https://github.com/itxnargis/memory-diary",
+  icon: "📓",
+  tags: ["React", "Node.js", "MongoDB", "Express", "Full-stack"],
+  techStack: ["React", "Node.js", "MongoDB", "Express"],
+  primaryTech: "MERN",
+  featured: true,
+  status: "Live",
+  year: "2025",
+  category: "Productivity",
+  type: "Full-stack Application",
+  highlights: [
+    "Mood-based memories",
+    "Music & photo support",
+    "Secure PIN authentication",
+  ],
+}
+
+  {
+    id: 4,
     title: "Trendz Ecommerce Platform",
     description: "A full-featured MERN stack eCommerce platform with advanced features.",
     longDescription:
@@ -83,7 +110,7 @@ const featuredProjects = [
 
 const additionalProjects = [
   {
-    id: 4,
+    id: 5,
     title: "LiveChat - Real-Time Platform",
     description: "A real-time chat application built with React and Firebase.",
     image: "/live-chat-app.png",
@@ -100,7 +127,7 @@ const additionalProjects = [
     type: "Web Application",
   },
   {
-    id: 5,
+    id: 6,
     title: "Spotify Music Finder",
     description: "An app to identify songs and find their matches on Spotify.",
     image: "/spotify-preview.gif",
@@ -117,7 +144,7 @@ const additionalProjects = [
     type: "Web Application",
   },
   {
-    id: 6,
+    id: 7,
     title: "Resto Restaurant",
     description: "A demo website for a restaurant showcasing delicious flavors and cozy atmosphere.",
     image: "/resto-preview.gif",
@@ -134,7 +161,7 @@ const additionalProjects = [
     type: "Static Website",
   },
   {
-    id: 7,
+    id: 8,
     title: "Explore Lakshadweep",
     description: "An informative travel website for exploring the beauty of Lakshadweep.",
     placeholder: "/placeholder.svg?height=300&width=400&text=Explore+Lakshadweep",
@@ -150,7 +177,7 @@ const additionalProjects = [
     type: "Static Website",
   },
   {
-    id: 8,
+    id: 9,
     title: "English Dictionary",
     description: "Instant word meanings with a clean, user-friendly interface.",
     placeholder: "/placeholder.svg?height=300&width=400&text=English+Dictionary",
@@ -166,7 +193,7 @@ const additionalProjects = [
     type: "Web Application",
   },
   {
-    id: 9,
+    id: 10,
     title: "Grocery Bud",
     description: "Smart grocery list manager with local storage and easy editing.",
     placeholder: "/placeholder.svg?height=300&width=400&text=Grocery+Bud",
