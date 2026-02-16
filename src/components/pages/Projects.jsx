@@ -83,8 +83,7 @@ const featuredProjects = [
     "Music & photo support",
     "Secure PIN authentication",
   ],
-}
-
+},
   {
     id: 4,
     title: "Trendz Ecommerce Platform",
